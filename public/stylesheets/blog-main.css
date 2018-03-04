@@ -1,0 +1,34 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: white;
+}
+
+.main {
+    background: grey;
+    margin: 0 auto;
+}
+
+.container {
+    padding: 25px 40px;
+    width: 60%;
+    background-color: white;
+    margin: 0 auto;
+}
+
+#title h1 {
+    font-size: 60px;
+    text-align: center;
+    margin: 0;
+}
+
+#title hr {
+    border: 1px solid black;
+}
+
+#title p {
+    float: right;
+}
+
+.blog-post {
+    
+}

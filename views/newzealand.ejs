@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Journey Journal | New Zealand</title>
+    <link rel="shortcut icon" href="./img/favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="./stylesheets/paralax.css">
+    <link rel="stylesheet" href="./stylesheets/blog-main.css">
+    <style type="text/css">
+		#paralax-0{background-image: url(img/newzealand/paralax/paralax-0.png)}
+		#paralax-1{background-image: url(img/newzealand/paralax/paralax-1.png)}
+		#paralax-2{background-image: url(img/newzealand/paralax/paralax-2.png)}
+		#paralax-3{background-image: url(img/newzealand/paralax/paralax-3.png)}
+		#paralax-4{background-image: url(img/newzealand/paralax/paralax-4.png)}
+		#paralax-5{background-image: url(img/newzealand/paralax/paralax-5.png)}
+	</style>
+</head>
+<body>
+	<div id="paralax">
+		<div id="paralax-0" class="paralax-image"></div>
+		<div id="paralax-1" class="paralax-image"></div>
+		<div id="paralax-2" class="paralax-image"></div>
+		<div id="paralax-3" class="paralax-image"></div>
+		<div id="paralax-4" class="paralax-image"></div>
+		<div id="paralax-5" class="paralax-image"></div>
+	</div>
+    
+    <div class="main">
+        <div class="container">
+            <section id="title">
+                <h1>New Zealand</h1>
+                <hr>
+                <p>28 days, 17 hotels</p>
+            </section>
+
+            <section class="blog-post">
+                <p>Dit is de blog die we van plan zijn een paar keer per week up te daten tijdens onze reis. Door het tijdverschil (12 uur!) wordt het moeilijk om veel in 
+                    direct contact te komen met jullie; we weten niet eens zeker hoe vaak we toegang hebben tot het Internet. Plus, we kunnen hier zelf ook een leuke 
+                    herinnering mee maken!
+
+                    Een ander voordeel van de blog is dat het wat moeilijker te vinden is. We willen onze reis liever niet openbaar maken op Facebook en dergelijke, 
+                    vooral omdat we niet naar een leeg huis terug willen keren xD Mochten jullie dus op deze posts willen reageren (yay), dan zouden we het fijn vinden 
+                    als jullie niet op de Facebook like button klikken! 
+                    We zullen echter onze best doen om de posts leuk genoeg te maken ;D
+                    
+                    We vertrekken aanstaande maandagmiddag, 5 uur, en zullen woensdagochtend vroeg in Auckland aankomen. We zullen zo snel mogelijk over het verloop van 
+                    de vlucht en de aankomst bloggen!</p>
+            </section>
+
+        </div>
+    </div>        		
+
+    
+    <script type="text/javascript">
+
+        window.addEventListener("DOMContentLoaded", scrollLoop, false);
+
+        var parallax0 = document.querySelector("#paralax-0");
+        var parallax1 = document.querySelector("#paralax-1");
+        var parallax2 = document.querySelector("#paralax-2");
+        var parallax3 = document.querySelector("#paralax-3");
+        var parallax4 = document.querySelector("#paralax-4");
+        // var parallax5 = document.querySelector("#paralax-5");
+        var yScrollPos;
+
+        function scrollLoop(e) {
+            yScrollPos = window.scrollY;
+
+            setTranslate(0, yScrollPos * 0.9, parallax0);
+            setTranslate(0, yScrollPos * 0.8, parallax1);
+            setTranslate(0, yScrollPos * 0.6, parallax2);
+            setTranslate(0, yScrollPos * 0.4, parallax3);
+            setTranslate(0, yScrollPos * 0.2, parallax4);
+            // setTranslate(0, yScrollPos * -1, parallax5);
+            requestAnimationFrame(scrollLoop);
+        }
+        function setTranslate(xPos, yPos, el) {
+            el.style.transform = "translate3d(" + xPos + ", " + yPos + "px, 0)";
+        }
+        
+    </script>
+</body>
+</html>
