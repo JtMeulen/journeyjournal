@@ -2,24 +2,57 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: white;
 }
-
-.main {
-    background:white;
-    margin: 0 auto;
+/* NAVBAR STYLE */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    background: #ff798d;
+    color: white;
 }
 
+.nav-ph {
+    height: 39px;
+}
+
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.menu, .logo {
+    margin: 10px 20px;
+    display: flex;
+    height: 100%;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    height: 100%;
+    cursor: pointer;
+}
+
+.menu a:hover, .menu a:active {
+    background: #fa95a4;
+}
+
+.background-paralax {
+    height: 500px;
+    width: 100vw;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* BLOG POST STYLE */
 section {
     background-color: white;
     /* margin: 0 20%; */
     padding: 25px 25%;
 }
-
-/* .container {
-    padding: 25px 40px;
-    width: 60%;
-    background-color: white;
-    margin: 0 auto;
-} */
 
 #title h1 {
     font-size: 60px;

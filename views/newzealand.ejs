@@ -6,58 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Journey Journal | New Zealand</title>
     <link rel="shortcut icon" href="./img/favicon.png">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">    
     <link rel="stylesheet" href="./stylesheets/paralax.css">
     <link rel="stylesheet" href="./stylesheets/blog-main.css">
+    <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <!-- Manually load all the top paralax pictures in here -->
     <style type="text/css">
 		#paralax-1{background-image: url(img/newzealand/paralax/paralax-1.png)}
 		#paralax-2{background-image: url(img/newzealand/paralax/paralax-2.png)}
 		#paralax-3{background-image: url(img/newzealand/paralax/paralax-3.png)}
 		#paralax-4{background-image: url(img/newzealand/paralax/paralax-4.png)}
-        #paralax-5{background-image: url(img/newzealand/paralax/paralax-5.png)}
-        
-        nav {
-            display: flex;
-            justify-content: space-between;
-            /* padding: 10px 20px; */
-            background: #ff798d;
-            color: white;
-        }
-
-        .menu, .logo {
-            margin: 10px 20px;
-            display: flex;
-            height: 100%;
-        }
-
-        .menu a {
-            color: white;
-            text-decoration: none;
-            margin-left: 15px;
-            height: 100%;
-            cursor: pointer;
-        }
-
-        .menu a:hover, .menu a:active {
-            background: #fa95a4;
-        }
-
-        .background-paralax {
-            height: 500px;
-            width: 100vw;
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        
-
-	</style>
+        #paralax-5{background-image: url(img/newzealand/paralax/paralax-5.png)} 
+    </style>
 </head>
 <body>
 	<div id="paralax">
-		<div id="paralax-0" class="paralax-image"></div>
 		<div id="paralax-1" class="paralax-image"></div>
 		<div id="paralax-2" class="paralax-image"></div>
 		<div id="paralax-3" class="paralax-image"></div>
@@ -66,15 +29,16 @@
 	</div>
     
     <!-- <div class="main">
-        <div class="container"> -->
-            <nav>
+        <div class="container"> -->            
+            <nav class="navbar">
                 <p class="logo">JourneyJournal</p>
                 <div class="menu">
-                    <a href="#">Map</a>
+                    <a href="/">Map</a>
                     <a href="#">About Us</a>
                     <a href="#">Contact</a>
                 </div>
             </nav>
+            <div id="nav-ph"></div>
 
             <section id="title">
                 <h1>New Zealand</h1>
@@ -158,12 +122,29 @@
                 <hr>
             </section>
 
+            <div class="background-paralax" style="background-image: url(img/newzealand/background-paralax/IMG_5623.JPG)"></div>
+
+            <section class="blog-post">                                
+                <p>In de avond zijn we in Auckland nog voor de laatste keer de Skytower in gegaan - maar dit keer niet om te springen! We konden hier mooi op het hoogste punt van 
+                    Auckland de stad donker zien worden, met een 360 graden uitzicht. We zijn alleen wel in de regen terug naar het hotel gerend!</p>
+                <p>De volgende dag (vanmorgen voor ons) zijn we uitgechecked en in 2,5 uur naar Hahei gereden. De road trip ging ongeveer een uur door de bergen, met ook hier weer 
+                    onvoorstelbaar mooie uitzichten. In Hahei zelf zijn we met de Hahei Explorer langs de kust gaan varen (met heel hoge snelheid). We zijn grotten ingegaan en 
+                    hebben onderweg o.a. vissen, kwallen, pijlstaartroggen en zelfs pinguins gezien! Het weer zat ook mee. Het spetterde in de ochtend, maar na de zonnige 
+                    boottocht hebben we nog een paar uur op Hahei Beach uitgerust - het werd nog erg warm. We sluiten deze dag af met een etentje op Hot Water Beach, waar we 
+                    morgen onze eigen warm water baden in het zand kunnen gaan graven, en posten zo snel mogelijk weer wat!</p>
+                <p>De volgende dag (vanmorgen voor ons) zijn we uitgechecked en in 2,5 uur naar Hahei gereden. De road trip ging ongeveer een uur door de bergen, met ook hier weer 
+                    onvoorstelbaar mooie uitzichten. In Hahei zelf zijn we met de Hahei Explorer langs de kust gaan varen (met heel hoge snelheid). We zijn grotten ingegaan en 
+                    hebben onderweg o.a. vissen, kwallen, pijlstaartroggen en zelfs pinguins gezien! Het weer zat ook mee. Het spetterde in de ochtend, maar na de zonnige 
+                    boottocht hebben we nog een paar uur op Hahei Beach uitgerust - het werd nog erg warm. We sluiten deze dag af met een etentje op Hot Water Beach, waar we 
+                    morgen onze eigen warm water baden in het zand kunnen gaan graven, en posten zo snel mogelijk weer wat!</p>
+                <hr>
+            </section>
+
         <!-- </div>
     </div>        		 -->
 
     
     <script type="text/javascript">
-
         window.addEventListener("DOMContentLoaded", scrollLoop, false);
 
         var parallax1 = document.querySelector("#paralax-1");
@@ -188,5 +169,6 @@
         }
         
     </script>
+    <script type="text/javascript" src="./scripts/views-main/navbar.js"></script>
 </body>
 </html>
