@@ -4,16 +4,22 @@ body {
 }
 
 .main {
-    background: grey;
+    background:white;
     margin: 0 auto;
 }
 
-.container {
+section {
+    background-color: white;
+    /* margin: 0 20%; */
+    padding: 25px 25%;
+}
+
+/* .container {
     padding: 25px 40px;
     width: 60%;
     background-color: white;
     margin: 0 auto;
-}
+} */
 
 #title h1 {
     font-size: 60px;
@@ -26,9 +32,9 @@ body {
 }
 
 #title p {
-    float: right;
+    text-align: center;
 }
 
-.blog-post {
-    
+.blog-post hr {
+    width: 80%;
 }
