@@ -10,24 +10,14 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="../../stylesheets/blog.css">
     <link rel="stylesheet" href="../../stylesheets/main/footer.css">
+    <link rel="stylesheet" href="../../stylesheets/main/navbar.css">
     <script src="../../scripts/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
-    <nav class="navbar">
-        <p class="logo">
-            <strong>JourneyJournal</strong>
-        </p>
-        <div class="menu">
-            <a href="/blog">Blog</a>
-            <a href="/">Map</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact</a>
-        </div>
-    </nav>
-
+    <% include ../partials/navbar %>
     
-    <% for(var i = posts.length - 1; i >= 0; i--){ %>
+    <% for(var i = posts.length - 1; i >= 0; i--){ %>        
         <div class="post">
             <h2><%=posts[i].title %></h2>
             <p class="date"><em><%= posts[i].date %></em></p>
@@ -39,37 +29,10 @@
                     <img src="<%=url%>" />
                 <% } %>
             <% }) %>
-        </div>
-        
+        </div>        
     <% }; %>
         
-    <footer>    
-        <h4>See our other blogs!</h4>
-        <hr>                
-        <div class="footer-links">
-            <ul>
-                <li><a href="#">USA</a></li>
-                <li><a href="#">Sri Lanka</a></li>
-                <li><a href="#">New Zealand</a></li>
-                <li><a href="#">South Africa</a></li>
-                <li><a href="#">Hong Kong</a></li>
-            </ul>  
-            <ul>
-                <li><a href="#">Thailand</a></li>
-                <li><a href="#">Malaysia</a></li>
-                <li><a href="#">Romania</a></li>
-                <li><a href="#">Japan</a></li>
-                <li><a href="#">Korea</a></li>
-            </ul>                
-            <ul>
-                <li><a href="#">Thailand</a></li>
-                <li><a href="#">Malaysia</a></li>
-                <li><a href="#">Romania</a></li>
-                <li><a href="#">Japan</a></li>
-                <li><a href="#">Korea</a></li>
-            </ul>
-        </div>
-    </footer>
+    <% include ../partials/footer %>
 
 </body>
 </html>

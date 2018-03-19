@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+}
+
+p {
+    margin: 30px;
+}

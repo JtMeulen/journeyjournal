@@ -32,10 +32,12 @@ app.use(function(req, res, next){
    next();
 });
 
+// WORLD MAP
 app.get('/', function(req, res){
     res.render('landing');
 });
 
+// JOURNALS
 app.get('/newzealand', function(req, res){
     res.render('stories/newzealand');
 });
@@ -56,6 +58,10 @@ app.get('/malaysia', function(req, res){
     res.send('malaysia');
 });
 
+// ABOUT US
+app.get("/about-us", function(req, res){
+    res.render("about-us")
+})
 
 // Blog ROUTES
 app.get('/blog', function(req, res){
@@ -112,8 +118,6 @@ app.post("/login", function(req, res, next){
 //         });
 //     });
 // });
-
-
 
 function isLoggedIn(req, res, next){
     if(req.isAuthenticated()){
