@@ -9,3 +9,9 @@ $(window).bind('scroll', function(){
         $("#nav-ph").removeClass("nav-ph");
     }
 })
+
+$(".scroll-btn").click(function() {
+    $('html, body').animate({
+        scrollTop: $(".navbar").offset().top
+    }, 1700);
+});

@@ -18,3 +18,28 @@ html, body {
 #paralax {
     height: 100vh;
 }
+
+.scroll-btn {
+    background-image: url("/img/general/scroll_down_btn.png");
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    z-index: 20;
+    cursor: pointer;
+    bottom: 20px;
+    border-radius: 50%;
+    left: calc(50% - 50px);
+    animation: bounce infinite 2s linear;
+}
+
+.scroll-btn:hover {
+    animation-play-state: paused;
+    /* transform: scale(0.95) */
+}
+
+.scroll-btn:active {
+    transform: scale(0.9);
+}
+@keyframes bounce {
+    50% {transform: scale(1.1)}
+}
