@@ -9,14 +9,25 @@
     <link rel="shortcut icon" href="./img/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <style type="text/css">
+        input, textarea, button {
+            display: block;
+            width: 80%;
+            margin: 5px auto;
+            box-sizing: border-box;
+        }
+        button {
+            background: lightgreen;
+            outline: none;
+            border: 1px solid grey;            
+        }
     </style>
 </head>
 
 <body>
     <form action="/blog" method="POST">
-        <input type="text" name="title" placeholder="title" />
-        <input type="text" name="location" placeholder="location" />
-        <textarea name="post" placeholder="Post" rows="20" cols="20" ></textarea>
+        <input type="text" name="title" placeholder="title" required/>
+        <input type="text" name="location" placeholder="location" required/>
+        <textarea name="post" placeholder="Post" rows="20" cols="20" required></textarea>
         <input type="text" name="images[0]" placeholder="imageurl" />
         <input type="text" name="images[1]" placeholder="imageurl" />
         <input type="text" name="images[2]" placeholder="imageurl" />

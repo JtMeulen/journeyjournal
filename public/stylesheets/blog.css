@@ -1,6 +1,7 @@
 html, body{
-    padding: 20px 0 0 0;
+    padding: 19px 0 0 0;
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .navbar {
@@ -33,4 +34,42 @@ html, body{
 
 img {
     max-width: 350px;
+}
+
+/* POST STYLES */
+
+.post {
+    padding: 25px 20%;
+}
+.post h2 {
+    margin-top: 0;
+}
+.date {
+    font-size: 0.8em;
+}
+pre {
+    font-size: inherit;
+    font-family: inherit; 
+}
+
+.post hr {
+    width: 25%;
+    margin-left: 0;    
+    
+}
+
+.post:nth-of-type(even) {
+    background: #ccc
+}
+
+.post:nth-of-type(even) hr {
+     border-top: white 1px solid;    
+}
+
+pre {
+    white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+    white-space: -pre-wrap; /* Opera */
+    white-space: -o-pre-wrap; /* Opera */
+    white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+    word-wrap: break-word; /* IE 5.5+ */
 }

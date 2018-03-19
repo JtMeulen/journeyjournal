@@ -53,8 +53,8 @@ app.get('/blog/new', function(req, res){
 });
 
 app.post('/blog', function(req, res){    
-    var newPost = req.body; 
-    newPost.date = new Date();   
+    var newPost = req.body;
+    newPost.date = new Date().toGMTString().slice(0, 25);   
     Post.create(newPost, function(err, newPost){
         if(err){
             alert("FAILED TO POST");

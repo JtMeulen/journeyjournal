@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="../../stylesheets/blog.css">
     <link rel="stylesheet" href="../../stylesheets/main/footer.css">
-    <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <script src="../../scripts/jquery-3.3.1.min.js"></script>
 </head>
 
 <body>
@@ -19,26 +19,29 @@
             <strong>JourneyJournal</strong>
         </p>
         <div class="menu">
+            <a href="/blog">Blog</a>
             <a href="/">Map</a>
             <a href="#">About Us</a>
             <a href="#">Contact</a>
         </div>
     </nav>
 
-    <% posts.forEach(function(post){ %>
-        <div>
-            <h2><%=post.title %></h2>
-            <p><%= post.date %></p>
-            <p><%= post.location %></p>
-            <p><%= post.post %></p>
-            <% post.images.forEach(function(url){ %>
+    
+    <% for(var i = posts.length - 1; i >= 0; i--){ %>
+        <div class="post">
+            <h2><%=posts[i].title %></h2>
+            <p class="date"><em><%= posts[i].date %></em></p>
+            <p><strong><%= posts[i].location %></strong></p>
+            <hr />
+            <pre width="20"><%= posts[i].post %></pre>
+            <% posts[i].images.forEach(function(url){ %>
                 <% if(url !== ""){ %> 
                     <img src="<%=url%>" />
                 <% } %>
             <% }) %>
         </div>
-        <hr />
-    <% }); %>
+        
+    <% }; %>
         
     <footer>    
         <h4>See our other blogs!</h4>
