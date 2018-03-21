@@ -19,6 +19,7 @@
 		#paralax-3{background-image: url(img/newzealand/paralax/paralax-3.png)}
 		#paralax-4{background-image: url(img/newzealand/paralax/paralax-4.png)}
         #paralax-5{background-image: url(img/newzealand/paralax/paralax-5.png)} 
+        #paralax-6{background-image: url(img/newzealand/paralax/paralax-6.png)} 
     </style>
 </head>
 <body>
@@ -33,6 +34,7 @@
 		<div id="paralax-3" class="paralax-image"></div>
 		<div id="paralax-4" class="paralax-image"></div>
 		<div id="paralax-5" class="paralax-image"></div>
+		<div id="paralax-6" class="paralax-image"></div>
         <div class="scroll-btn"></div>
 	</div>
               
@@ -88,6 +90,7 @@
             post natuurlijk! Hopelijk hebben we voor de volgende ook zoveel tijd :P</p>
         <p>Morgen hebben we ook nog de hele dag in Auckland en overmorgen rijden we naar Hahei voor twee broodnodige stranddagen!</p>
         <hr>
+
     </section>
     
     <div class="background-paralax" style="background-image: url(img/newzealand/background-paralax/IMG_1679.JPG)"></div>
@@ -153,17 +156,17 @@
         var parallax2 = document.querySelector("#paralax-2");
         var parallax3 = document.querySelector("#paralax-3");
         var parallax4 = document.querySelector("#paralax-4");
-        // var parallax5 = document.querySelector("#paralax-5");
+        var parallax5 = document.querySelector("#paralax-5");
         var yScrollPos;
 
         function scrollLoop(e) {
             yScrollPos = window.scrollY;
 
             setTranslate(0, yScrollPos * 0.8, parallax1);
-            setTranslate(0, yScrollPos * 0.6, parallax2);
-            setTranslate(0, yScrollPos * 0.4, parallax3);
-            setTranslate(0, yScrollPos * 0.2, parallax4);
-            // setTranslate(0, yScrollPos * -1, parallax5);
+            setTranslate(0, yScrollPos * 0.7, parallax2);
+            setTranslate(0, yScrollPos * 0.6, parallax3);
+            setTranslate(0, yScrollPos * 0.4, parallax4);
+            setTranslate(0, yScrollPos * 0.2, parallax5);
             requestAnimationFrame(scrollLoop);
         }
         function setTranslate(xPos, yPos, el) {
