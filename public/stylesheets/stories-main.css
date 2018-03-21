@@ -6,8 +6,9 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    background: #ff798d;
+    background: #cf6776;
     color: white;
+    z-index: 500;
 }
 
 .nav-ph {
@@ -70,4 +71,14 @@ section {
 
 .blog-post hr {
     width: 80%;
+}
+
+@media (max-width: 500px) {
+    section {
+        padding: 25px 20px;
+    }
+
+    .background-paralax {
+        height: 300px;
+    }
 }
