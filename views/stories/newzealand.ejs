@@ -9,8 +9,10 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">    
     <link rel="stylesheet" href="./stylesheets/main/paralax.css">
     <link rel="stylesheet" href="./stylesheets/stories-main.css">
+    <link rel="stylesheet" href="./stylesheets/main/image-reel.css">
     <link rel="stylesheet" href="./stylesheets/main/footer.css">
     <script src="./scripts/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
     <!-- Manually load all the top paralax pictures in here -->
     <style type="text/css">
 		#paralax-1{background-image: url(img/newzealand/paralax/paralax-1.png)}
@@ -39,8 +41,7 @@
         <hr>                
     </section>
 
-    <section class="blog-post">
-        
+    <section class="blog-post">        
         <p>Dit is de blog die we van plan zijn een paar keer per week up te daten tijdens onze reis. Door het tijdverschil (12 uur!) wordt het moeilijk om veel in 
             direct contact te komen met jullie; we weten niet eens zeker hoe vaak we toegang hebben tot het Internet. Plus, we kunnen hier zelf ook een leuke 
             herinnering mee maken!</p>
@@ -50,7 +51,13 @@
             We zullen echter onze best doen om de posts leuk genoeg te maken ;D</p>                    
         <p>We vertrekken aanstaande maandagmiddag, 5 uur, en zullen woensdagochtend vroeg in Auckland aankomen. We zullen zo snel mogelijk over het verloop van 
             de vlucht en de aankomst bloggen!</p>
-        <hr>                
+        <hr>
+
+        <div class="image-reel-container" id="reel1">
+            <button class="scroll-left" disabled>&lt;</button>
+            <div class="image-reel"></div>
+            <button class="scroll-right">&gt;</button>
+        </div>                
     </section>
     
     <div class="background-paralax" style="background-image: url(img/newzealand/background-paralax/IMG_1549.JPG)"></div>
@@ -161,5 +168,6 @@
         
     </script>
     <script type="text/javascript" src="./scripts/views-main/navbar.js"></script>
+    <script type="text/javascript" src="./scripts/views-main/image-reels/image-reel-NZ.js"></script>
 </body>
 </html>

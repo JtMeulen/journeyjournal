@@ -1,0 +1,25 @@
+.thumbnail {
+    height: 80px;
+    width: 150px;
+    
+    margin-right: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.thumbnail:hover,
+.thumbnail:active {
+    border: 1px solid black;
+}
+
+.image-reel {
+    height: 80px;
+    width: 3000px;
+    float: left; 
+    position: relative;      
+}
+
+.image-reel-container {
+    overflow: hidden; 
+}
