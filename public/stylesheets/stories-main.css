@@ -2,6 +2,22 @@ body {
     font-family: 'Montserrat', sans-serif;
     background: white;
 }
+
+#Map-Route {
+    position: absolute;
+    margin-top: 30px;
+    opacity: 1;
+}
+
+.fixed-map {
+    position: fixed !important;
+    top: 30px;
+}
+
+#Map {
+    opacity: 0.85;
+}
+
 /* NAVBAR STYLE */
 .navbar {
     display: flex;
