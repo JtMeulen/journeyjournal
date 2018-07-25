@@ -6,7 +6,7 @@ var LocalStrategy = require('passport-local');
 var bodyParser = require('body-parser');
 var Post = require('./models/posts');
 var User = require('./models/user');
-var keys = require("./keys");
+// var keys = require("./keys");
 
 var url = process.env.DBURL || keys.DBURL;
 mongoose.connect(url, {useMongoClient: true});
