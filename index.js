@@ -8,7 +8,7 @@ var Post = require('./models/posts');
 var User = require('./models/user');
 var keys = require("./keys");
 
-mongoose.connect(keys.DBURL);
+mongoose.connect(process.env.DBURL || keys.DBURL);
 // mongoose.Promise = global.Promise
 
 app.use(bodyParser.urlencoded({extended: true}));
