@@ -126,6 +126,6 @@ function isLoggedIn(req, res, next){
     res.redirect("/blog");
 }
 
-app.listen(3000, function(){
-    console.log("APP RUNNING on PORT 3000");
+app.listen(process.env.PORT || 80, process.env.IP, function(){
+    console.log("APP RUNNING on PORT ", process.env.PORT || 80);
 });
