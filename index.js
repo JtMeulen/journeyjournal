@@ -8,8 +8,9 @@ var Post = require('./models/posts');
 var User = require('./models/user');
 var keys = require("./keys");
 
-mongoose.connect(process.env.DBURL || keys.DBURL);
-// mongoose.Promise = global.Promise
+var url = process.env.DBURL || keys.DBURL;
+mongoose.connect(url, {useMongoClient: true});
+mongoose.Promise = global.Promise;
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
