@@ -9,7 +9,7 @@ var User = require('./models/user');
 // var keys = require("./keys");
 
 var url = process.env.DBURL || keys.DBURL;
-mongoose.connect(url, {useMongoClient: true});
+mongoose.connect(url);
 mongoose.Promise = global.Promise;
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -31,6 +31,24 @@ passport.deserializeUser(User.deserializeUser());
 app.use(function(req, res, next){
    res.locals.currentUser = req.user;
    next();
+});
+
+// Middleware to retrieve last date of blog, so we can set the cookie and make a marker in navbar
+app.use(function(req, res, next){
+    Post.find({}, function(err, posts){
+        if(err){
+            next();
+        } else {
+            if(posts.length > 1) {
+                posts.sort(function(a, b) {
+                    var dateA = new Date(a.date), dateB = new Date(b.date);
+                    return dateB - dateA;
+                });
+            }
+            res.locals.latestDate = posts[0].date;
+            next();
+        }
+    }); 
 });
 
 // WORLD MAP
@@ -66,10 +84,16 @@ app.get("/about-us", function(req, res){
 
 // Blog ROUTES
 app.get('/blog', function(req, res){
-    Post.find({}, function(err, posts){
+    Post.find({}, function(err, posts){             
         if(err){
             res.render("ERROR. COME BACK LATER");
         } else {
+            if(posts.length > 1) {
+                posts.sort(function(a, b) {
+                    var dateA = new Date(a.date), dateB = new Date(b.date);
+                    return dateA - dateB;
+                });
+            }   
             res.render('blog/blog', {posts: posts});
         }
     }); 
@@ -81,7 +105,7 @@ app.get('/blog/new', isLoggedIn, function(req, res){
 
 app.post('/blog', isLoggedIn, function(req, res){    
     var newPost = req.body;
-    newPost.date = new Date().toGMTString().slice(0, 25);   
+    newPost.date = new Date().toUTCString().slice(0, 25);   
     Post.create(newPost, function(err, newPost){
         if(err){
             alert("FAILED TO POST");
@@ -127,6 +151,6 @@ function isLoggedIn(req, res, next){
     res.redirect("/blog");
 }
 
-app.listen(process.env.PORT || 80, process.env.IP, function(){
-    console.log("APP RUNNING on PORT ", process.env.PORT || 80);
+app.listen(process.env.PORT || 3000, process.env.IP, function(){
+    console.log("APP RUNNING on PORT ", process.env.PORT || 3000);
 });

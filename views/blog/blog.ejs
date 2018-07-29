@@ -33,6 +33,8 @@
     <% }; %>
         
     <% include ../partials/footer %>
-
+    <script>
+        document.cookie = "lastVisit=" + new Date().toUTCString().slice(0, 25);
+    </script>
 </body>
 </html>

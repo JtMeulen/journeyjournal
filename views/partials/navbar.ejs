@@ -3,9 +3,31 @@
         <strong>JourneyJournal</strong>
     </p>
     <div class="menu">
-        <a href="/blog">Blog</a>
+        <a href="/blog">Blog<span id="blog_icon">!</span></a>
         <a href="/">Map</a>
         <a href="/about-us">About Us</a>
         <a href="#">Contact</a>
     </div>
 </nav>
+
+<script id="latestDate" type="application/json">
+    <%= latestDate %>
+</script>
+<script>
+    var data = document.getElementById('latestDate').textContent.trim()
+    document.cookie = 'lastBlog=' + data
+</script>
+<script>
+    function getCookieValue(a) {
+        var b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
+        return b ? b.pop() : '';
+    }
+    var lastBlog = getCookieValue('lastBlog');
+    var lastVisit = getCookieValue('lastVisit');
+
+    if(lastBlog && lastVisit) {
+        if(lastVisit > lastBlog) {
+            $('#blog_icon').css("display", "none");
+        }
+    }
+</script>
